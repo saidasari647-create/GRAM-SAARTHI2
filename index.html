@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>GRAM SAARTHI — Rural Business Advisor</title>
+  <meta name="description" content="Financial intake, health dashboard, and government scheme matching for rural entrepreneurs.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#intake" aria-label="GRAM SAARTHI home">
+      <span class="logo">🌱</span><span>GRAM SAARTHI</span>
+    </a>
+    <nav>
+      <a href="#intake" data-page="intake">Intake Form</a>
+      <a href="#dashboard" data-page="dashboard">Health Dashboard</a>
+      <a href="#schemes" data-page="schemes">Schemes &amp; Loans</a>
+    </nav>
+    <div class="lang">
+      <span>◎</span>
+      <select id="language" aria-label="Language">
+        <option value="en">EN</option><option value="hi">हिन्दी</option>
+        <option value="te">తెలుగు</option><option value="ta">தமிழ்</option>
+      </select>
+    </div>
+  </header>
+
+  <main id="app"></main>
+
+  <div class="assist-wrap">
+    <button id="voiceBtn" class="floating voice" title="Voice assistant">◉</button>
+    <button id="accessBtn" class="floating access" title="Accessibility">⌘</button>
+  </div>
+  <div id="voicePanel" class="voice-panel hidden">
+    <div class="voice-head"><strong>Voice Assistant</strong><button id="closeVoice">×</button></div>
+    <p id="voiceStatus">Say a field value, for example: “My name is Ravi”.</p>
+    <div class="voice-actions">
+      <button id="startVoice" class="primary">🎙 Start listening</button>
+      <button id="stopVoice" class="secondary">Stop</button>
+    </div>
+    <div class="voice-hint">Works in Chrome/Edge when microphone permission is allowed.</div>
+  </div>
+  <div id="toast" class="toast hidden"></div>
+  <script src="app.js"></script>
+</body>
+</html>
